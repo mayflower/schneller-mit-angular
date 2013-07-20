@@ -1,13 +1,15 @@
 {
-  "name": "angular-td",
+  "name": "schneller-mit-angular",
   "version": "0.0.1",
   "ignore": [
     "**/.*",
     "node_modules",
     "components"
   ],
+  "dependencies": {
+    "angular": "1.0"
+  },
   "devDependencies": {
-    "angular": "*",
-    "angular-mocks": "*"
+    "angular-mocks": "1.0"
   }
 }

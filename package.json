@@ -1,22 +1,22 @@
 {
-  "name": "angular-td",
+  "name": "schneller-mit-angular",
   "version": "0.0.1",
   "description": "Start tdd angular app",
   "scripts": {
-    "postinstall": "node_modules/.bin/grunt setup || true; node_modules/.bin/bower install"
+    "postinstall": "bower install"
   },
   "repository": "",
   "author": "",
   "license": "BSD",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt-cli": "*",
-    "grunt": "*",
-    "grunt-mkdir": "*",
-    "karma": "*",
-    "grunt-karma": "*",
-    "phantomjs": "*",
+  "dependencies": {
     "bower": "*"
+  },
+  "devDependencies": {
+    "grunt-cli": "0.1",
+    "grunt": "0.4",
+    "karma": "0.8",
+    "grunt-karma": "0.4",
+    "phantomjs": "1.9"
   },
   "readmeFilename": "README.md"
 }

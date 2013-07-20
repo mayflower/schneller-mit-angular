@@ -1,4 +1,8 @@
-process.env.PHANTOMJS_BIN = __dirname + '/node_modules/phantomjs/lib/phantom/bin/phantomjs';
+var isWin = /Windows/.test(require('os').type()),
+    phantomLibDir = __dirname + '/node_modules/phantomjs/lib/phantom/';
+
+// set PHANTOMJS_BIN for karma
+process.env.PHANTOMJS_BIN =  phantomLibDir + (isWin ? 'phantomjs.exe' : 'bin/phantomjs');
 
 module.exports = function(grunt) {
 
@@ -9,8 +13,8 @@ module.exports = function(grunt) {
             options: {
                 // does not serve any purpose but to fix a grunt-karma error
                 configFile: 'node_modules/grunt-karma/karma.conf.js',
-                // setting urlRoot to __dirname serves e2e browser().navigateTo calls
-                urlRoot: __dirname + '/',
+                // setting urlRoot to /base/ serves e2e browser().navigateTo calls relative to basePath
+                urlRoot: '/base/',
                 basePath: __dirname,
                 singleRun: true,
                 autoWatch: false,
