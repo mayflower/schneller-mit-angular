@@ -57,9 +57,6 @@ module.exports = function(grunt) {
                     autoWatch: true
                 }
             }
-        },
-        mkdir: {
-            all: { options: { create: ['src', 'test/e2e', 'test/unit'] } }
         }
     });
 
@@ -68,9 +65,6 @@ module.exports = function(grunt) {
     grunt.registerTask('test:unit-dev', ['karma:unit-dev']);
     grunt.registerTask('test:e2e-dev',  ['karma:e2e-dev']);
 
-    grunt.registerTask('setup', ['mkdir:all']);
-
     // Load the plugins provided by npm
     grunt.loadNpmTasks('grunt-karma');
-    grunt.loadNpmTasks('grunt-mkdir');
 };
